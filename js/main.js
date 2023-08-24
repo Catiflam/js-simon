@@ -4,9 +4,9 @@ const timeHours = document.getElementById("hours");
 const timeMinutes = document.getElementById("minutes");
 const timeSeconds = document.getElementById("seconds");
 
-const countdown = setInterval(function () {
+setInterval(() => {
 	const now = new Date();
-	const tomorrow = new Date("23-08-25 9:30");
+	const tomorrow = new Date("2023-08-25 9:30");
 
 	const msNow = now.getTime();
 
@@ -23,4 +23,4 @@ const countdown = setInterval(function () {
 	timeMinutes.innerText = minutes < 10 ? "0" + minutes : minutes;
 	timeHours.innerText = hours < 10 ? "0" + hours : hours;
 	timeDays.innerText = days < 10 ? "0" + days : days;
-});
+}, 1000);
